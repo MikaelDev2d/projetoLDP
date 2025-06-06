@@ -1,21 +1,20 @@
-operador = input("Seu operador é (adição +), (subtração -) ou (divisão /)?  ")
-parte1 = int(input("Qual é seu primeiro número?:   "))
-parte2 = int(input("Qual é seu segundo número?:   "))
-
-if operador == "+" or "adição":
+operador = input("Seu operador é (adição +), (subtração -), (multiplicação *) ou (divisão /)?  ")
+if operador != "+" and operador != "-" and operador != "/" and operador != "*":
+    print("Ainda não aprendi esse operador!...")
+    exit()
+else:
+ parte1 = int(input("Qual é seu primeiro número?:   "))
+ parte2 = int(input("Qual é seu segundo número?:   "))
+    
+if operador == "+":
     parte1 + parte2
     print((parte1)+(parte2))
-
-elif operador == "-" or "subtração":
+elif operador == "-":
     parte1 - parte2
     print((parte1)-(parte2))
-
-elif operador == "/" or "divisão":
+elif operador == "/":
     parte1 / parte2
     print((parte1)/(parte2))
-
-else:
-    print("Opa! Eu ainda não sei fazer essa conta com esse operador :( ")
-    exit()
-
-    
+elif operador == "*":
+    parte1 * parte2
+    print((parte1)*(parte2))
